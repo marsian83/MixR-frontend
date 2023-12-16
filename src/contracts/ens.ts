@@ -450,4 +450,4 @@ const abi = [
   },
 ] as const;
 
-export default { address, abi };
+export default { address, abi } as const;

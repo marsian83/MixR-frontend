@@ -1,5 +1,5 @@
 import { Abi, GetContractReturnType, getContract } from "viem";
-import { usePublicClient, useWalletClient } from "wagmi";
+import { useContractRead, usePublicClient, useWalletClient } from "wagmi";
 import client from "../client";
 import { useEffect, useState } from "react";
 
@@ -38,7 +38,7 @@ function viemContract<T extends Abi, P extends `0x${string}`>(
         publicClient,
       })
     );
-  }, [walletClient, publicClient]);
+  }, [walletClient, publicClient, contractData]);
 
   return contract;
 }
