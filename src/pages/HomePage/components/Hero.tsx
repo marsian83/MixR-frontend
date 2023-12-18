@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
-    <div>
-      <div className="py-20 h-[60vh] w-full ">
+    <div className="p-page">
+      <div className="py-20 h-[65vh] w-full ">
         <div className="flex flex-col h-full gap-12">
           <div>
             <h1 className="text-5xl leading-[3.5rem]">

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import DataForm from "./DataForm";
+import Icon from "./Icon";
 
 export default function Navbar() {
   return (
@@ -49,10 +50,10 @@ export default function Navbar() {
             <Link to="/loyalty"> Loyalty</Link>{" "}
           </li>
           <li className="font-medium py-2">
-            <Link to="/signin"> Sign In</Link>
+            <Link to="/login"> Sign In</Link>
           </li>
           <li className="border-2 px-4 py-2 text-white bg-secondary rounded-lg ">
-            <Link to="/Community"> Sign Up</Link>
+            <Link to="/register"> Sign Up</Link>
           </li>
           <li className="font-medium py-2">
             <Link to="/cart"> Ic Cart</Link>
@@ -63,13 +64,13 @@ export default function Navbar() {
       <section>
         <ul className="p-page flex justify-between bg-foreground py-2 font-poppins">
           <li className="flex justify-between w-[55%]">
-            <div>Footwear x</div>
-            <div>Men x</div>
-            <div>Women x</div>
-            <div>Children x</div>
-            <div>Rising x</div>
-            <div>Shop by City x</div>
-            <div>Creators x</div>
+            <div className="flex items-center ">Footwear <Icon icon="expand_more"></Icon></div>
+            <div className="flex items-center ">Men <Icon icon="expand_more"></Icon></div>
+            <div className="flex items-center ">Women <Icon icon="expand_more"></Icon></div>
+            <div className="flex items-center ">Children <Icon icon="expand_more"></Icon></div>
+            <div className="flex items-center ">Rising <Icon icon="expand_more"></Icon></div>
+            <div className="flex items-center ">Shop by City <Icon icon="expand_more"></Icon></div>
+            <div className="flex items-center ">Creators <Icon icon="expand_more"></Icon></div>
           </li>
           <li>Leaderboard</li>
         </ul>

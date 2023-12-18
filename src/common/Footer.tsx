@@ -39,7 +39,7 @@ export default function Footer() {
   return (
     <footer>
 
-      <section className="flex p-page flex-col justify-center bg-foreground text-center items-center py-24 gap-y-8 ">
+      <section className="flex p-page flex-col justify-center bg-foreground text-center items-center py-20 gap-y-8 ">
         <h1 className="text-3xl font-semibold">Join the community</h1>
         <h2 className="font-light"> We're here to create the{" "} <i className="font-normal"> <b>best</b> </i>{" "}
             market place in game by putting community first. <br />
@@ -51,16 +51,16 @@ export default function Footer() {
         
           <div className="flex flex-col justify-between items-center gap-y-8 px-8 border-r border-gray-300 ">
             <div className="text-3xl">Discord</div>
-            <div className="text-gray-400 pb-3">Join</div>
+            <div className="text-gray-400 pb-3"><Link to="#">Join</Link></div>
           </div>
 
           <div className="flex flex-col justify-between items-center gap-y-8 px-8 border-r border-gray-300">
-            <div className="text-3xl">Membership</div>
-            <div className="text-gray-400 pb-3">Sign up</div>
+            <div className="text-3xl"><Link to="/membership">Membership</Link></div>
+            <div className="text-gray-400 pb-3"><Link to="/register">Sign up</Link></div>
           </div>
 
           <div className="flex flex-col justify-between items-center gap-y-8 px-8 ">
-            <div className="text-3xl">Instagram</div>
+            <div className="text-3xl"><Link to="#">Instagram</Link></div>
             <div className="text-gray-400 pb-3">Follow us</div>
           </div>
       </div>
@@ -69,7 +69,7 @@ export default function Footer() {
 
 
 
-      <section className="flex p-page bg-secondary py-24 text-white gap-x-8">
+      <section className="flex p-page bg-secondary py-16 text-white gap-x-8">
         <div className="w-[30%] text-sm self-center pr-4 leading-6 font-light">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
           maiores exercitationem quos pariatur optio! Reprehenderit ad fugit
