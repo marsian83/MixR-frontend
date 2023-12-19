@@ -162,7 +162,7 @@ const Items = () => {
 
 <div className="flex flex-col gap-y-8">
 {dummy.map((data,i)=>(
-  <div className="flex gap-x-6" key={i}>
+  <div className="flex gap-x-6 " key={i}>
     {data.map((info,k)=>(
       <div key={k}>
          <Shoe_Card

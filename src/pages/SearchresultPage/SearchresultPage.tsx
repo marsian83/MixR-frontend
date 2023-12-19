@@ -2,7 +2,7 @@
 
 const SearchresultPage = () => {
   return (
-    <div>SearchresultPage</div>
+    <div className="p-page">SearchresultPage</div>
   )
 }
 

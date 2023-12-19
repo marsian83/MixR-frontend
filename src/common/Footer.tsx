@@ -81,7 +81,7 @@ export default function Footer() {
               <h1 className="text-2xl">{section.title}</h1>
               <div className="flex flex-col gap-y-2 text-base font-light text-gray-300">
                 {section.items.map((item, key) => (
-                  <Link key={key} to={item.to}>
+                  <Link className="text-sm" key={key} to={item.to}>
                     {item.title}
                   </Link>
                 ))}
