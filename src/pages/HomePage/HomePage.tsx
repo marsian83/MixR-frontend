@@ -41,7 +41,7 @@ const MixRSpecialData = [
         " Navigating this world is hard. We're here to make sure you're in the best hands.",
     },
   ],
-];
+] as const;
 
 export default function HomePage() {
   return (
