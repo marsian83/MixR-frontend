@@ -1,3 +1,4 @@
+import Icon from "../../../common/Icon";
 import { Shoe_Card } from "../../../common/Shoe_Card";
 
 const dummyJSon = [
@@ -68,6 +69,7 @@ const ShoppingCategory = (props:any) => {
           img_src={data.img_src}
           img_alt={data.img_alt}
           product_des={data.product_detail}
+          size={9}
           />
           </div>
         ))}
@@ -75,9 +77,13 @@ const ShoppingCategory = (props:any) => {
         
 
         <div className="flex items-center justify-center pt-10 pb-4">
-          <div className=" border-2 text-sm rounded-md font-normal px-7 py-3">
-            See all
-          </div>
+        <button className=" border-2 text-sm rounded-md font-normal px-5 py-3 flex items-center justify-center gap-x-1">
+          <div>
+          See all 
+          </div >
+          <Icon icon="Forward"/>
+          </button>
+
         </div>
       </section>
     </div>

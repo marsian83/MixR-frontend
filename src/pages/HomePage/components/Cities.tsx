@@ -1,3 +1,5 @@
+import Icon from "../../../common/Icon";
+
 const Cities = () => {
   const rows = [
     { cities: ["Miami", "New York" , "Los Angles" , "Chicago"] },
@@ -21,7 +23,12 @@ const Cities = () => {
     </div>
 
     <div className="flex items-center justify-center pt-10 pb-4">
-        <div className=" border-2 text-sm rounded-md font-normal px-7 py-3">See all</div>
+        <button className=" border-2 text-sm rounded-md font-normal px-5 py-3 flex items-center justify-center gap-x-1">
+          <div>
+          See all 
+          </div >
+          <Icon icon="Forward"/>
+          </button>
     </div>
 
     </div>;

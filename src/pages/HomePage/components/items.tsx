@@ -170,6 +170,7 @@ const Items = () => {
           img_src={info.img_src}
           img_alt={info.img_alt}
           product_des={info.product_detail}
+          size={10}
           />
       </div>
     ))}

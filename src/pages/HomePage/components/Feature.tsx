@@ -1,3 +1,5 @@
+import Icon from "../../../common/Icon";
+
 const Feature = (props: any) => {
   const cardData_1 = [
     {
@@ -35,24 +37,26 @@ const Feature = (props: any) => {
         {cardData_1.map((data, k) => (
           <div
             key={k}
-            className="w-[31%] border-[1px] rounded-lg shadow-[0px_1px_3px_1px_rgba(0,0,0,0.1)] "
+            className="w-[31%] overflow-hidden border-[1px] rounded-lg shadow-[0px_1px_3px_1px_rgba(0,0,0,0.1)] "
           >
-            <div className=" h-[10rem] border-b-2 ">
               <img
-                className=" p-4 h-full w-full "
+                className=" object-cover h-[10rem] border-b-2  w-full "
                 src={data.img.src}
                 alt={data.img.alt}
               />
+            <div className="  ">
             </div>
 
-            <div className=" px-5 py-2">
-              <div className="flex justify-between">
-                <div className="flex    flex-col gap-y-1">
+            <div className=" px-5  py-2">
+              <div className="flex justify-between items-start">
+                <div className="flex flex-col gap-y-1">
                   <div className="text-base font-medium">{data.heading} </div>
                   <div className="text-xs">{data.City}</div>
                 </div>
-                <button className=" px-6 mb-4 text-sm py-2 text-white bg-secondary rounded-lg">
-                  shop
+
+                <button className=" px-4 mb-3 text-sm py-2 text-white bg-secondary rounded-lg flex justify-center items-center gap-x-1">
+                  <div> shop</div>
+                  <Icon icon="Forward" />
                 </button>
               </div>
             </div>
@@ -61,9 +65,10 @@ const Feature = (props: any) => {
       </div>
 
       <div className="flex items-center justify-center pt-10 pb-4">
-        <div className=" border-2 text-sm rounded-md font-normal px-7 py-3">
-          See all
-        </div>
+        <button className=" border-2 text-sm rounded-md font-normal px-5 py-3 flex items-center justify-center gap-x-1">
+          <div>See all</div>
+          <Icon icon="Forward" />
+        </button>
       </div>
     </div>
   );

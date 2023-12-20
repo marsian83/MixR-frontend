@@ -77,7 +77,7 @@ export default function Footer() {
         </div>
         <div className="flex flex-1 justify-between">
           {links.map((section, i) => (
-            <div key={i} className="flex flex-col gap-y-5 w-[33%]">
+            <div key={i} className="flex flex-col  pr-4 gap-y-5 w-[33%]">
               <h1 className="text-2xl">{section.title}</h1>
               <div className="flex flex-col gap-y-2 text-base font-light text-gray-300">
                 {section.items.map((item, key) => (

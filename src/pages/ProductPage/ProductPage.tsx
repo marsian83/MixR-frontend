@@ -25,13 +25,13 @@ const ProductPage = () => {
           <img
             src="https://media.gq-magazine.co.uk/photos/64522f9ab0c390be7c433e97/1:1/w_1396,h_1396,c_limit/Screenshot%202023-05-03%20at%2010.53.53.png"
             alt=""
-            className="h-[25rem]  w-full"
+            className="h-[25rem] object-cover w-full"
           />
 
-          <div className=" mt-4  flex justify-center gap-x-2">
-            <img src="" alt="" className="border-[1px] rounded-xl p-4" />
-            <img src="" alt="" className="border-[1px] rounded-xl p-4" />
-            <img src="" alt="" className="border-[1px] rounded-xl p-4" />
+          <div className=" mt-4 flex justify-center ">
+            <img src="/images/Side view Left.png" alt="Left side View of product" className="border-[1px] rounded-xl p-4 scale-75" />
+            <img src="/images/Front View.png" alt="Back view of product" className="border-[1px] rounded-xl p-4 scale-75" />
+            <img src="/images/Side View Right.png" alt="Right side view of product" className="border-[1px] rounded-xl p-4 scale-75" />
           </div>
         </div>
 

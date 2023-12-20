@@ -1,3 +1,5 @@
+import { useState } from "react";
+import Icon from "../../common/Icon";
 import { Shoe_Card } from "../../common/Shoe_Card";
 
 const ShoppingCategories = ["Clothing", "Men", "Women", "Kids", "Rising"];
@@ -357,6 +359,19 @@ const dummyJSon = [
 ];
 
 const SearchresultPage = () => {
+
+ const [check,setCheck] = useState(false)
+
+function CheckBoxHandler() {
+    if(check == false){
+        setCheck(true);
+    }
+    else{
+      setCheck(false);
+    }
+}
+
+
   return (
     <div className="mb-24">
       <section className=" bg-foreground p-page py-8  my-8  w-full">
@@ -394,10 +409,13 @@ const SearchresultPage = () => {
               {ShoppingCities.map((data, k) => (
                 <div
                   key={k}
-                  className="flex gap-x-1 items-center text-xs capitalize"
+                  className="flex gap-x-2 items-center text-xs capitalize "
                 >
-                  <div className="h-full">C</div>
-                  <div className="px-1">{data}</div>
+                  <div className="h-full" onClick={CheckBoxHandler}>
+                    {check?<Icon icon="clickedCheckbox" className="text-xl cursor-pointer"/>:<Icon icon="checkbox" className="text-xl cursor-pointer"/>}
+                
+                  </div>
+                  <div className="">{data}</div>
                 </div>
               ))}
             </div>
@@ -436,10 +454,14 @@ const SearchresultPage = () => {
               {prices.map((data, k) => (
                 <div
                   key={k}
-                  className="flex gap-x-1 items-center text-xs capitalize"
+                  className="flex gap-x-2 items-center text-xs capitalize"
                 >
-                  <div className="h-full">C</div>
-                  <div className="px-1 font-light">{data}</div>
+                   <div className="h-full" onClick={CheckBoxHandler}>
+                    {check?<Icon icon="clickedCheckbox" className="text-xl cursor-pointer"/>:<Icon icon="checkbox" className="text-xl cursor-pointer"/>}
+                
+                  </div>
+                  <div className="">{data}</div>
+
                 </div>
               ))}
             </div>
@@ -448,46 +470,47 @@ const SearchresultPage = () => {
 
         <section className="w-[80%] pl-3">
           <div className="flex mb-6 gap-x-2">
-            <button className="border-[1px] border-gray-300 px-2 py-1 text-xs font-medium rounded">
-              Sort By ic
+            <button className="border-[1px] border-gray-300 px-2 py-1 text-xs font-medium rounded flex items-center gap-x-1">
+              <div>
+              Sort By
+              </div>
+               <Icon icon="expand_more" className="text-lg"/>
             </button>
-            <button className="border-[1px] border-gray-300 px-2 text-xs font-medium rounded">
-              Shuffle ic
+            <button className="border-[1px] border-gray-300 px-2 text-xs font-medium rounded flex items-center gap-x-1 ">
+              <div>
+              Shuffle
+              </div>
+               <Icon icon="Shuffle" className="text-lg"/>
             </button>
           </div>
 
           <div className="flex flex-col gap-y-6 mb-10">
-
-{
-  dummyJSon.map((data,k)=>(
-    <div key={k}>
- <div className="flex gap-x-6 ">
-              {data.map((data, k) => (
-                <div className="" key={k}>
-                  <Shoe_Card
-                    price={data.price}
-                    img_src={data.img_src}
-                    img_alt={data.img_alt}
-                    product_des={data.product_detail}
-                  />
+            {dummyJSon.map((data, k) => (
+              <div key={k}>
+                <div className="flex gap-x-6 ">
+                  {data.map((data, k) => (
+                    <div className="" key={k}>
+                      <Shoe_Card
+                        price={data.price}
+                        img_src={data.img_src}
+                        img_alt={data.img_alt}
+                        product_des={data.product_detail}
+                        size={11}
+                      />
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-    </div>
-  ))
-}
-
-           
+              </div>
+            ))}
           </div>
 
           <div className="flex justify-end text-xs ">
-            <div className="flex border  border-gray-400">
-              <button className="py-1 px-2">{"<"}</button>
+            <div className="flex border border-gray-400">
+              <button className="py-1 px-2 text-center"> <Icon icon="Backward"/>  </button>
               <div className="border-x py-1 px-2 font-normal border-gray-400">
-                {" "}
-                Page 1 of 100{" "}
+                Page 1 of 100
               </div>
-              <button className="py-1 px-2">{">"}</button>
+              <button className="py-1 px-2 text-center"> <Icon icon="Forward"/>  </button>
             </div>
           </div>
         </section>

@@ -1,3 +1,4 @@
+import Icon from "../../common/Icon";
 import Cities from "./components/Cities";
 import Feature from "./components/Feature";
 import Hero from "./components/Hero";
@@ -11,6 +12,37 @@ const catergorydata = [
   "Women Clothing",
 ];
 
+const MixRSpecialData = [
+  [
+    {
+      icon: "search",
+      heading: " Browse all types of products",
+      describe:
+        " Discover Products You would previously never find. Brands and deals from stores and botiques across the country.",
+    },
+    {
+      heading: "Manage your memberships",
+      describe:
+        "Manage your digital subscription and membership in one place.",
+      icon: "Setting",
+    },
+  ],
+  [
+    {
+      icon: "Setting",
+      heading: "Manage your memberships",
+      describe:
+        "Discover Products You would previously never find. Brands and deals from stores and botiques across the country.",
+    },
+    {
+      icon: "SupportAgent",
+      heading: "Community Support",
+      describe:
+        " Navigating this world is hard. We're here to make sure you're in the best hands.",
+    },
+  ],
+];
+
 export default function HomePage() {
   return (
     <>
@@ -18,8 +50,9 @@ export default function HomePage() {
         <Hero />
 
         <section className="p-page bg-foreground flex justify-center gap-x-11 py-8 items-center text-sm w-full">
-          <div className="pr-12">
-            Ic <button>Shuffle through products</button>
+          <div className="pr-12 flex gap-x-1 items-center">
+            <Icon icon="Shuffle" className="text-2xl" />
+            <button> Shuffle through products</button>
           </div>
           {catergorydata.map((data, i) => (
             <button
@@ -31,15 +64,21 @@ export default function HomePage() {
           ))}
         </section>
 
-        <Items />
+           <Items />
         <div className="mt-6">
           <Cities />
         </div>
 
-<div className="">
-        <Feature heading1={"Newly Added"} heading2={"New Brands in the Mix."} />
-        <Feature heading1={"Newly Added"} heading2={"New Brands in the Mix."} />
-</div>
+        <div className="">
+          <Feature
+            heading1={"Newly Added"}
+            heading2={"New Brands in the Mix."}
+          />
+          <Feature
+            heading1={"Newly Added"}
+            heading2={"New Brands in the Mix."}
+          />
+        </div>
 
         <section className="p-page mt-12 w-full mb-12">
           <h1 className="text-3xl mb-12 font-medium">
@@ -47,60 +86,19 @@ export default function HomePage() {
           </h1>
 
           <div className="flex flex-col gap-y-7">
-            <div className="flex gap-x-16">
-              <div className="flex gap-x-5  w-[50%]">
-                <div>Icon</div>
-                <div className="flex flex-col gap-y-2 text-base w-[100%]">
-                  <div className="text-lg font-normal">
-                    Browse all types of products
+            {MixRSpecialData.map((row, i) => (
+              <div key={i} className="flex gap-x-16">
+                {row.map((temp, k) => (
+                  <div className="flex gap-x-5  w-[50%]">
+                    <div> <Icon icon={temp.icon} className="text-4xl"/> </div>
+                    <div className="flex flex-col gap-y-2 text-base w-[100%]">
+                      <div className="text-lg font-normal">{temp.heading}</div>
+                      <div className="text-gray-500">{temp.describe}</div>
+                    </div>
                   </div>
-                  <div className="text-gray-500">
-                    {" "}
-                    Discover Products You would previously never find. Brands
-                    and deals from stores and botiques across the country.{" "}
-                  </div>
-                </div>
+                ))}
               </div>
-              <div className="flex gap-x-5 w-[50%]">
-                <div>Icon</div>
-                <div className="flex flex-col gap-y-2 text-base">
-                  <div className="text-lg font-normal">
-                    Manage your memberships
-                  </div>
-                  <div className="text-gray-500">
-                    Manage your digital subscription and membership in one
-                    place.{" "}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex gap-x-16">
-              <div className="flex gap-x-5 w-[50%]">
-                <div>Icon</div>
-                <div className="flex flex-col gap-y-2 text-base">
-                  <div className="text-lg font-normal">
-                    Manage your memberships
-                  </div>
-                  <div className="text-gray-500">
-                    {" "}
-                    Discover Products You would previously never find. Brands
-                    and deals from stores and botiques across the country.{" "}
-                  </div>
-                </div>
-              </div>
-              <div className="flex gap-x-5 w-[50%]">
-                <div>Icon</div>
-                <div className="flex flex-col gap-y-2 text-base">
-                  <div className="text-lg font-normal">Community Support</div>
-                  <div className="text-gray-500">
-                    {" "}
-                    Navigating this world is hard. We're here to make sure
-                    you're in the best hands.{" "}
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </section>
 
