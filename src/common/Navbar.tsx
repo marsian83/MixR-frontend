@@ -14,7 +14,8 @@ const NavbarCategory = [
 ];
 
 export default function Navbar() {
-  const [navState, setNavState] = useState(false);
+
+  
 
   return (
     <nav>
@@ -36,8 +37,6 @@ export default function Navbar() {
             }}
             className="flex border-2 border-secondary w-[80%] rounded "
           >
-         
-
             <div className="bg-foreground px-3 py-3 text-2xl">
               <Icon icon="search" />
             </div>
@@ -58,9 +57,6 @@ export default function Navbar() {
               className="cursor-pointer bg-foreground px-3 py-2 text-sm font-medium"
             />
           </DataForm.Container>
-
-
-
         </div>
 
         <ul className="flex justify-between w-[35%] text-s items-center  ">
@@ -77,11 +73,9 @@ export default function Navbar() {
             <Link to="/register"> Sign Up</Link>
           </li>
           <li className="font-medium py-2 ">
-            <Link to="/cart" className="flex justify-center items-center"> 
-            <Icon  icon="cart" className="text-3xl"/> 
-            <div>Cart</div>
-            
-            
+            <Link to="/cart" className="flex justify-center items-center">
+              <Icon icon="cart" className="text-3xl" />
+              <div>Cart</div>
             </Link>
           </li>
         </ul>

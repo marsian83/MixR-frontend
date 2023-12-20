@@ -4,11 +4,11 @@ import Icon from "../../../common/Icon";
 
 export default function Hero() {
   return (
-    <div className="p-page font-kablammo">
+    <div className="p-page font-RedRose">
       <div className="py-20 h-[65vh] w-full ">
         <div className="flex flex-col h-full gap-12">
           <div>
-            <h1 className="text-5xl leading-[3.5rem]">
+            <h1 className="text-5xl font-medium leading-[3.5rem]">
               One Maketplace to Discover <br /> Countless Stores & Brands
             </h1>
           </div>
