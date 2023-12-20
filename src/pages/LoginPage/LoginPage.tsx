@@ -14,7 +14,7 @@ const LoginPage = () => {
             }}
             className="flex flex-col justify-center items-center space-y-4 w-[100%] "
           >
-            <div className="w-[100%] space-y-2">
+            <div className="w-[100%] space-y-3">
               <DataForm.Input
                 required
                 name="Email"
@@ -41,7 +41,7 @@ const LoginPage = () => {
             <DataForm.Input
               type="submit"
               value={"Continue"}
-              className="cursor-pointer w-full px-4 py-4 text-sm font-medium text-white bg-secondary rounded-lg hover:bg-gray-500 hover:text-black "
+              className="cursor-pointer w-full px-4 py-4 text-sm font-medium text-back border-2 border-transparent duration-300 bg-secondary rounded-lg hover:bg-background hover:text-front h hover:border-front"
             />
           </DataForm.Container>
 
@@ -53,11 +53,30 @@ const LoginPage = () => {
           </div>
           <div className="text-sm">OR</div>
           <div className="w-[100%] space-y-2">
-            <button className="w-full px-4 py-4 text-sm font-medium text-gray-600 bg-foreground rounded-lg border-2 border-gray-300 ">
+            <button className="w-full px-4 py-4 text-sm font-medium text-gray-600 bg-foreground rounded-lg border-2 border-gray-300 flex justify-center gap-x-2">
+             
+            <img
+                src="/images/google.png"
+                alt="logo of mixr"
+              
+              />
+<div>
               CONTINUE WITH GOOGLE
+</div>
+
+
             </button>
-            <button className="w-full px-4 py-4 text-sm font-medium text-gray-600 bg-foreground rounded-lg border-2 border-gray-300 ">
+            <button className="w-full px-4 py-4 text-sm font-medium text-gray-600 bg-foreground rounded-lg border-2 border-gray-300 flex justify-center gap-x-2 ">
+
+            <img
+                src="/images/wallet.png"
+                alt="logo of mixr"
+              
+              />
+
+              <div>
               CONTINUE WITH WALLET
+              </div>
             </button>
           </div>
         </div>

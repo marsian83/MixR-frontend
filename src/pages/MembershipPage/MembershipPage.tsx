@@ -1,7 +1,7 @@
 const MembershipPage = () => {
   const data = [
     {
-      img: { src: "", alt: "" },
+      img: { src: "/images/Silver.png", alt: "Silver Medal" },
       title: "Free Membership",
       price: "0",
       facilities: [
@@ -14,7 +14,7 @@ const MembershipPage = () => {
       plan: "year",
     },
     {
-      img: { src: "", alt: "" },
+      img: { src: "/images/Gold.png", alt: "Gold Star" },
       title: "Monthly Membership",
       price: "15",
       facilities: [
@@ -26,7 +26,7 @@ const MembershipPage = () => {
       plan: "month"
     },
     {
-      img: { src: "", alt: "" },
+      img: { src: "/images/Crown.png", alt: "King Crown" },
       title: "Annual Membership",
       price: "99",
       facilities: [
@@ -44,24 +44,37 @@ const MembershipPage = () => {
       <h1 className="text-center py-14 text-2xl font-semibold">
         Join the MixR Community
       </h1>
-      <div className="flex gap-x-5 justify-center items-center  ">
+
+
+
+      <div className="flex gap-x-8 justify-center items-center  ">
         {data.map((card, i) => (
           <div
             key={i}
             className="flex flex-col w-[33%] items-center px-10 py-8 border-1  border-gray-200 rounded-lg shadow-[0_0px_5px_3px_rgba(0,0,0,0.1)]  "
           >
-            <img src={card.img.src} alt={card.img.alt} />
-            <div className="py-4 text-xl font-normal">{card.title}</div>
+            <img src={card.img.src} alt={card.img.alt} className="" />
+            <div className="py-4 text-xl text-center font-normal">{card.title}</div>
             <div className="flex items-end gap-x-1 py-4">
               <div className="text-6xl font-medium">${card.price}</div>
               <div className="text-gray-400">/{card.plan}</div>
             </div>
             <div className="py-8">
               <div>
-                {" "}
+
                 {card.facilities.map((fas, ie) => (
                   <div>
-                    <div className="text-sm leading-7" key={ie}>x {fas}</div>
+                    <div className="text-sm leading-7 flex  gap-x-2 " key={ie}>
+                    
+
+                    <img src="/images/Verify.png" alt="" className="scale-50 object-cover w-[2rem] " />
+
+                      <div>
+                      {fas}
+
+                      </div>
+                      
+                      </div>
                   </div>
                 ))}
               </div>

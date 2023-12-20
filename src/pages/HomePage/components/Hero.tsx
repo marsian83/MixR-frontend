@@ -1,13 +1,14 @@
 import DataForm from "../../../common/DataForm";
 import { Link } from "react-router-dom";
+import Icon from "../../../common/Icon";
 
 export default function Hero() {
   return (
-    <div>
-      <div className="py-20 h-[60vh] w-full ">
+    <div className="p-page font-RedRose">
+      <div className="py-20 h-[65vh] w-full ">
         <div className="flex flex-col h-full gap-12">
           <div>
-            <h1 className="text-5xl leading-[3.5rem]">
+            <h1 className="text-5xl font-medium leading-[3.5rem]">
               One Maketplace to Discover <br /> Countless Stores & Brands
             </h1>
           </div>
@@ -18,7 +19,7 @@ export default function Hero() {
               console.log(data);
             }} className="flex gap-x-3 w-full">
               <div className="w-[30%]  border-1 border-blue-300 shadow-[0_0px_2px_2px_rgba(96,165,250,0.3)] flex">
-                <button className="p-2 w-[12%]">ic</button>
+                <span className="p-2 w-[12%] flex justify-center items-center"><Icon icon="search" className="text-2xl" /></span>
                 
                                 
                 <DataForm.Input

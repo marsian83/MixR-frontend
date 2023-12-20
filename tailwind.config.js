@@ -24,6 +24,8 @@ export default {
       fontFamily: {
         poppins: '"Poppins", sans-serif',
         raleway: '"Raleway", sans-serif',
+        kablammo: '"Kablammo", sans-serif',
+        RedRose: '"RedRose", sans-serif',
       },
       zIndex: {
         1: 1,
