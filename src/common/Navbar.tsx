@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <nav>
-      <section className="p-page flex justify-between  py-6 ">
+      <section className="p-page flex justify-between bg-white py-6 ">
         <div className="flex w-[55%] justify-between items-center">
           <div className="py-2">
             <Link to="/">
