@@ -10,7 +10,8 @@ import ErrorPage from "./ErrorPage/ErrorPage";
 import LoginPage from "./LoginPage/LoginPage";
 import MembershipPage from "./MembershipPage/MembershipPage";
 import ProductPage from "./ProductPage/ProductPage";
-import SearchresultPage from "./SearchresultPage/SearchresultPage"
+import SearchresultPage from "./SearchresultPage/SearchresultPage";
+import AboutPage from "./AboutPage/AboutPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,6 +22,7 @@ const router = createBrowserRouter(
         <Route path="membership" element={<MembershipPage />} />
         <Route path="product" element={<ProductPage />} />
         <Route path="search" element={<SearchresultPage />} />
+        <Route path="about" element={<AboutPage/>} />
       </Route>
 
       <Route path="*" element={<ErrorPage />} />
